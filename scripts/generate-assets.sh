@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Create necessary directories
+mkdir -p public/testimonials
+mkdir -p public/images/services/{websites,mobile,ai,automation}/{screenshots,hero}
+mkdir -p public/team
+
+# Generate placeholder images using base64 data URLs
+base64_image="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCABkAGQDASIAAhEBAxEB/8QAGgAAAwEBAQEAAAAAAAAAAAAAAAMEBQIBBv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAf1QAAAAAAAAAAAAARVxTEp7yMwnPeQ0FPYLGd7zZzvWaAAAHh5Sy89L4jMJ73mNRT2D0xved7zYzfWbAAAHnnjrEp7yMinveQkNfYPDF953vNjO9ZsAAAecxW8p7yIwnPeQ0NfYPDF95sTNjO9ZsAAAHh5yMp7yMxnveYkVfYPDF95jO95sZ3rNgAAA8p7yMp7yIwnPeQUdfYLOd7zZzfWaAAAAAAAAAAAAAAB//8QAJhAAAgIBAwQBBQEAAAAAAAAAAgMBBBESABMQFCEwICIjJDEyQP/aAAgBAQABBQL+AqpYmObhEBPvEJ+lv4jW0lEbS3Gk10wnXmO1vkK5UmNYF9Ovqr/FfeX5/lP+dfVF8WR40IgdCIHrxquGpi1HEcT2i51zW3dEVY1XQntq0a+6v8V95fn+U/519VaInVtKOtQh1kQHW6kepLARqxVEhqzTML1kRGqtqtWluJ0yqtPGeK4DmtZGfEa2En//xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAEDAQE/AQf/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAECAQE/AQf/xAAwEAABAwIEAwYEBwAAAAAAAAABAAIRAyESMUFRECJxBBMgMmGRUnKBsRQwQkOhwfD/2gAIAQEABj8C/QXVDhbla1N1TDqF5gN8VN1MyDmpLCfRBtNzmE7qMLsJ9V5HfRBtJ2J2qDabsLtVzMIPUKm17YP6SiWOxN0KDXuBdqg2m7C7VczCD1CptfGF2hQbTdhdomljsTdE5j8bdWlObWH1CdReIe3RPpvEPboU+k8Q9uhX4d5h41adVDhcbhfhqhl+gWKoS93wjNc9V79m6HVc9V79m6FbsM/4//EACcQAQACAQMDAwQDAAAAAAAAAAEAESExQVEQYXEggZEwobHwQMHR/9oACAEBAAE/IfwL1DGzE7lI2/j1lgG0vxw95RYKE7CF/wAJKCM/uS5cuXLl/iD3ly5cuX6A9bl3SGBpf5WWDbJ4PMpbA0Y8QwLT1ioNbjzO4D3JzAdPMsabOPE7gPclhpseIDAVXPE7YfchAVm48QDgcHI8zsh9yLtV/wAJ2YfchRew5HmDFW2/wmCoreOIRlDh/UFQNbXx6TWBtKWBog94qgraeINYtgHvHVNbTxBVWoDFQGoO89QMrWeJ//aAAwDAQACAAMAAAAQ88888888888888888888888888888888888888888888888888//EABQRAQAAAAAAAAAAAAAAAAAAAEABkP/aAAgBAwEBPxAYP//EABQRAQAAAAAAAAAAAAAAAAAAAEAB/9oACAECAQE/EAE//8QAJxABAAIBAwMEAgMBAAAAAAAAAQARITFBUWFxgRCRobEgwUDR8PH/2gAIAQEAAT8Q/AsBG+jDtwS2Xr4KdMlVweW51oGC1uHVLueRhDsyu57IwGjglbE8zXQMFrcOqXc8jCHZjdz2RgauCVsTzNdAwWtw6pdzyMIdmN3PZFPVwStieZroGC1uHVLueRhDsxu57IwNXBK2J5mugYLW4dUu55GEOzK7nsjA1cErYnma6BgtbiXc8jCHZldz2RhoYJWxPMHQxFrcPSTyMIdkbueyMbDglYJ5g6GItbh6SeVhDsjd/wBkY2HBNAnmFgYu7f8AE3TMXYI2wHdGNhwTp15hYGLu3/E3TMXYLrhG2A7oxsOCdOvMLAxd2/4m6Zi7BdcI2wHdGGg4J068wsDN3b/ibpmLsOuEbYDui+g4J068/wD/2Q=="
+
+# Generate testimonial images
+for i in {1..2}; do
+  echo $base64_image | base64 --decode > "public/testimonials/$i.jpg"
+done
+
+# Generate team member images
+for member in sarah mike lisa david; do
+  echo $base64_image | base64 --decode > "public/team/$member.jpg"
+done
+
+# Generate service images
+for service in websites mobile ai automation; do
+  # Hero image
+  echo $base64_image | base64 --decode > "public/images/services/$service/hero.jpg"
+  
+  # Screenshots
+  for i in {1..3}; do
+    echo $base64_image | base64 --decode > "public/images/services/$service/screenshots/screen-$i.jpg"
+  done
+done
+
+echo "✅ Generated all placeholder images"
