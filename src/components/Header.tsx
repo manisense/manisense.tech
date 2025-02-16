@@ -2,9 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Icon } from '@/components/ui/icon';
+import Logo from '@/components/Logo';
 import type { IconName } from '@/components/icons';
+
+import Image from 'next/image';
+import starUrl from './../../public/logo/manisense-icon.svg';
+
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,15 +37,17 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex gap-2">
             <Image
-              src="/vercel.svg"
-              alt="ManiSense Logo"
-              width={120}
-              height={30}
+              src="/logo/manisense-icon.svg"
+              alt="ManiSense"
+              width={32}
+              height={32}
               className="dark:invert"
+              priority
             />
+            <span className="hidden md:inline-block text-xl font-bold mt-2 ">Manisense
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,16 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ['localhost'],
-    unoptimized: true,
-  },
   webpack(config) {
+    // Configure svgr
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack']
     });
     return config;
   }
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -10,8 +10,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ManiSense - Innovate. Build. Scale.",
-  description: "We create digital solutions that drive success. Let's build your future together.",
+  title: 'ManiSense - Digital Innovation Solutions',
+  description: 'Transform your digital vision with cutting-edge web, mobile, and AI solutions',
+  icons: {
+    icon: '/logo/manisense-icon.svg',
+    shortcut: '/logo/manisense-icon.svg',
+    apple: '/logo/manisense-icon.svg',
+  },
 };
 
 export default function RootLayout({

@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { ClientIcon } from '@/components/ui/client-icon';
@@ -202,12 +201,10 @@ export default function Home() {
                 href={`${service.href}#sample`}
                 className="p-6 bg-white/10 rounded-xl hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 backdrop-blur-sm"
               >
-                <div className="w-12 h-12 mx-auto mb-4 relative">
-                  <Image
-                    src={service.icon}
-                    alt={service.title}
-                    fill
-                    className="object-contain invert"
+                <div className="w-12 h-12 mx-auto mb-4">
+                  <ClientIcon
+                    name={service.icon as IconName}
+                    className="w-12 h-12 text-white"
                   />
                 </div>
                 <h3 className="font-semibold mb-2">{service.title}</h3>
