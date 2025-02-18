@@ -11,7 +11,7 @@ export default function Footer() {
       { name: 'Websites', href: '/services/websites' },
       { name: 'Mobile Apps', href: '/services/mobile-apps' },
       { name: 'AI Automation', href: '/services/ai-automation' },
-      { name: 'Automation', href: '/services/automation' }
+      { name: 'Products', href: '/services/products' }
     ],
     company: [
       { name: 'About', href: '/about' },
@@ -86,9 +86,9 @@ export default function Footer() {
               <li className="text-gray-600 dark:text-gray-400">
                 manisense7@gmail.com
               </li>
-              <li className="text-gray-600 dark:text-gray-400">
+              {/* <li className="text-gray-600 dark:text-gray-400">
                 +1 (555) 123-4567
-              </li>
+              </li> */}
               <li className="flex space-x-4 mt-4">
                 {sections.social.map((item) => (
                   <a
