@@ -1,5 +1,6 @@
 "use client"
 
+import { SiGmail } from "@icons-pack/react-simple-icons";
 import { type LucideIcon, Computer, Smartphone, Brain, Cog, Globe, ChevronRight, Mail, Phone, Menu, X, ExternalLink, Github, Linkedin, Twitter, CheckCircle, ArrowRight, Download, Users, Building, Clock, Monitor, Lock, Zap, Server, Database, Cloud, Container, Code, Apple,  Flame, CircuitBoard, TestTube,  BarChart2, Table, Cpu, GitBranch, Bot, MessageSquare, Workflow } from "lucide-react";
 
 interface IconsType {
@@ -21,6 +22,7 @@ export const Icons: IconsType = {
   globe: Globe,
   
   // Contact
+  gmail: SiGmail,
   email: Mail,
   phone: Phone,
   

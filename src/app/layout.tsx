@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'ManiSense - Digital Innovation Solutions',
-  description: 'Transform your digital vision with cutting-edge web, mobile, and AI solutions',
+  description: 'Transform your digital vision with cutting-edge web, mobile, and AI Automation solutions',
   icons: {
     icon: '/logo/manisense-icon.svg',
     shortcut: '/logo/manisense-icon.svg',

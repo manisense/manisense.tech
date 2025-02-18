@@ -36,7 +36,7 @@ const jobs = [
     department: "AI & ML",
     location: "Remote",
     type: "Full-time",
-    description: "Help develop cutting-edge AI solutions for our enterprise clients.",
+    description: "Help develop cutting-edge AI Automation solutions for our enterprise clients.",
     requirements: ["PhD in ML/AI", "PyTorch/TensorFlow", "Research publications"],
   }
 ];

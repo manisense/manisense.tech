@@ -25,8 +25,8 @@ export default function Header() {
   const navItems = [
     { name: 'Websites', href: '/services/websites', icon: 'websites' as IconName },
     { name: 'Mobile Apps', href: '/services/mobile-apps', icon: 'mobile' as IconName },
-    { name: 'AI Solutions', href: '/services/ai-solutions', icon: 'ai' as IconName },
-    { name: 'Automation', href: '/services/automation', icon: 'automation' as IconName },
+    { name: 'AI Automation', href: '/services/ai-automation', icon: 'ai' as IconName },
+    { name: 'Products', href: '/services/products', icon: 'automation' as IconName },
   ];
 
   return (
@@ -46,7 +46,7 @@ export default function Header() {
               className="dark:invert"
               priority
             />
-            <span className="hidden md:inline-block text-xl font-bold mt-2 ">Manisense
+            <span className="hidden md:inline-block text-xl font-bold mt-2 ">ManiSense
             </span>
           </Link>
 

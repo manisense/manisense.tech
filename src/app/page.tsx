@@ -23,14 +23,14 @@ export default function Home() {
       title: "AI & ML Solutions",
       description: "Leveraging artificial intelligence to drive business transformation.",
       icon: "ai",
-      href: "/services/ai-solutions",
+      href: "/services/ai-automation",
       features: ["Machine Learning", "NLP", "Computer Vision"]
     },
     {
-      title: "Business Automation",
+      title: "Products",
       description: "Optimizing operations with intelligent automation solutions.",
       icon: "automation",
-      href: "/services/automation",
+      href: "/services/products",
       features: ["Workflow Automation", "Process Optimization", "Integration"]
     }
   ];
@@ -52,7 +52,7 @@ export default function Home() {
     {
       name: "Michael Chen",
       role: "CTO, InnovateLabs",
-      content: "Their expertise in AI solutions helped us achieve unprecedented growth.",
+      content: "Their expertise in AI Automation solutions helped us achieve unprecedented growth.",
       image: "/testimonials/2.jpg"
     }
   ];

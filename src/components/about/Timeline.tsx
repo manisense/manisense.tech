@@ -11,7 +11,7 @@ const milestones = [
   {
     year: '2021',
     title: 'First Major Project',
-    description: 'Successfully delivered an enterprise-scale AI solution.'
+    description: 'Successfully delivered an enterprise-scale AI Automation solution.'
   },
   {
     year: '2022',

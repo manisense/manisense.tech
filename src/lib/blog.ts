@@ -17,10 +17,10 @@ export interface Post {
 export const samplePosts: Post[] = [
   {
     id: '1',
-    title: 'The Future of AI in Business Automation',
+    title: 'Explore our Innovative Tech Tools & Products',
     excerpt: 'Exploring how artificial intelligence is revolutionizing business processes...',
     content: `
-      # The Future of AI in Business Automation
+      # Use our inhouse built tools & products to streamline your business operations.
 
       Artificial intelligence is fundamentally changing how businesses operate...
       
@@ -32,7 +32,7 @@ export const samplePosts: Post[] = [
       
       ## Real-World Applications
       
-      Many organizations are already implementing AI solutions...
+      Many organizations are already implementing AI Automation solutions...
     `,
     author: {
       name: 'Dr. Sarah Chen',

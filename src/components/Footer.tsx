@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { ClientIcon } from '@/components/ui/client-icon';
+import type { IconName } from '@/components/icons';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,7 +10,7 @@ export default function Footer() {
     services: [
       { name: 'Websites', href: '/services/websites' },
       { name: 'Mobile Apps', href: '/services/mobile-apps' },
-      { name: 'AI Solutions', href: '/services/ai-solutions' },
+      { name: 'AI Automation', href: '/services/ai-automation' },
       { name: 'Automation', href: '/services/automation' }
     ],
     company: [
@@ -18,9 +20,9 @@ export default function Footer() {
       { name: 'Contact', href: '/contact' }
     ],
     social: [
-      { name: 'Twitter', href: 'https://twitter.com/manisense', icon: '/icons/twitter.svg' },
-      { name: 'LinkedIn', href: 'https://linkedin.com/company/manisense', icon: '/icons/linkedin.svg' },
-      { name: 'GitHub', href: 'https://github.com/manisense', icon: '/icons/github.svg' }
+      { name: 'Twitter', href: 'https://x.com/manisense_tech', icon: 'twitter' as IconName },
+      { name: 'Gmail', href: 'mailto:manisense7@gmail.com', icon: 'gmail' as IconName },
+      { name: 'GitHub', href: 'https://github.com/manisense', icon: 'github' as IconName }
     ]
   };
 
@@ -30,7 +32,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <Image src="/vercel.svg" alt="ManiSense" width={120} height={40} className="dark:invert" />
+            <Image src="/logo/manisense-icon.svg" alt="ManiSense" width={60} height={40} className="dark:invert" /><span className="hidden md:inline-block text-xl font-bold mt-2 ">ManiSense
+            </span>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
               Transforming ideas into digital reality with innovation and excellence.
             </p>
@@ -81,7 +84,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li className="text-gray-600 dark:text-gray-400">
-                contact@manisense.com
+                manisense7@gmail.com
               </li>
               <li className="text-gray-600 dark:text-gray-400">
                 +1 (555) 123-4567
@@ -95,7 +98,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
                   >
-                    <Image src={item.icon} alt={item.name} width={20} height={20} className="dark:invert" />
+                    <ClientIcon name={item.icon} className="w-5 h-5" />
                   </a>
                 ))}
               </li>
@@ -103,9 +106,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
+        {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
-          <p className="text-gray-400 text-sm text-center">
+          <p className="text-gray-500 dark:text-gray-400 text-sm text-center">
             © {currentYear} ManiSense. All rights reserved.
           </p>
         </div>

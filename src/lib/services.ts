@@ -6,9 +6,9 @@ export const services = {
     template: {
       preview: "/templates/website-preview.mp4",
       screenshots: [
-        { src: "/images/services/placeholder.jpg", alt: "Homepage Design" },
-        { src: "/images/services/placeholder.jpg", alt: "Services Page" },
-        { src: "/images/services/placeholder.jpg", alt: "Contact Page" }
+        { src: "/images/services/placeholder.jpg", alt: "Website Design", description: "Modern and responsive website design" },
+        { src: "/images/services/placeholder.jpg", alt: "E-commerce Solution", description: "Fully featured e-commerce platform" },
+        { src: "/images/services/placeholder.jpg", alt: "Mobile Optimization", description: "Mobile-first responsive design" }
       ]
     },
     templateDownloadUrl: "/downloads/website-template.zip",
@@ -67,9 +67,9 @@ export const services = {
     template: {
       preview: "/templates/mobile-preview.mp4",
       screenshots: [
-        { src: "/images/services/mobile/login.jpg", alt: "Login Screen" },
-        { src: "/images/services/mobile/dashboard.jpg", alt: "Dashboard View" },
-        { src: "/images/services/mobile/settings.jpg", alt: "Settings Interface" }
+        { src: "/images/services/mobile/login.jpg", alt: "Login Screen", description: "Secure and user-friendly authentication" },
+        { src: "/images/services/mobile/dashboard.jpg", alt: "Dashboard View", description: "Intuitive dashboard interface" },
+        { src: "/images/services/mobile/settings.jpg", alt: "Settings Interface", description: "Customizable user settings" }
       ]
     },
     templateDownloadUrl: "/downloads/mobile-template.zip",
@@ -124,16 +124,16 @@ export const services = {
     ctaText: "Launch Your App"
   },
 
-  "ai-solutions": {
-    title: "Intelligent AI Solutions",
+  "ai-automation": {
+    title: "Intelligent AI Automation Solutions",
     description: "Harness the power of artificial intelligence to transform your business operations.",
     heroImage: "/images/services/ai-hero.jpg",
     template: {
       preview: "/templates/ai-preview.mp4",
       screenshots: [
-        { src: "/images/services/ai/dashboard.jpg", alt: "AI Dashboard" },
-        { src: "/images/services/ai/analytics.jpg", alt: "Predictive Analytics" },
-        { src: "/images/services/ai/insights.jpg", alt: "AI Insights" }
+        { src: "/images/services/ai/dashboard.jpg", alt: "AI Dashboard", description: "Real-time AI analytics dashboard" },
+        { src: "/images/services/ai/analytics.jpg", alt: "Predictive Analytics", description: "Advanced predictive modeling" },
+        { src: "/images/services/ai/insights.jpg", alt: "AI Insights", description: "AI-powered business insights" }
       ]
     },
     templateDownloadUrl: "/downloads/ai-template.zip",
@@ -171,7 +171,7 @@ export const services = {
       {
         name: "David Kim",
         role: "CTO, DataTech",
-        content: "The AI solution dramatically improved our decision-making accuracy.",
+        content: "The AI Automation solution dramatically improved our decision-making accuracy.",
         image: "/testimonials/david.jpg"
       }
     ],
@@ -188,68 +188,109 @@ export const services = {
     ctaText: "Get Started with AI"
   },
 
-  "automation": {
-    title: "Seamless Automation Solutions",
-    description: "Streamline your operations with robust automation that saves time and reduces costs.",
-    heroImage: "/images/services/automation-hero.jpg",
+  "products": {
+    title: "Explore our Innovative Products",
+    description: "Explore our collection of powerful tools designed to enhance your digital workflow and productivity.",
+    heroImage: "/images/services/products-hero.jpg",
     template: {
-      preview: "/templates/automation-preview.mp4",
+      preview: "/templates/products-preview.mp4",
       screenshots: [
-        { src: "/images/services/automation/workflow.jpg", alt: "Workflow Dashboard" },
-        { src: "/images/services/automation/processes.jpg", alt: "Process Map" },
-        { src: "/images/services/automation/analytics.jpg", alt: "Automation Analytics" }
+        { 
+          src: "/images/services/products/thumbnail-generator.jpg", 
+          alt: "YouTube Thumbnail Generator",
+          description: "Create eye-catching thumbnails in seconds"
+        },
+        { 
+          src: "/images/services/products/bg-remover.jpg", 
+          alt: "Background Remover",
+          description: "Remove backgrounds with AI precision"
+        },
+        { 
+          src: "/images/services/products/image-optimizer.jpg", 
+          alt: "Image Optimizer",
+          description: "Optimize images without quality loss"
+        }
       ]
     },
-    templateDownloadUrl: "/downloads/automation-template.zip",
+    templateDownloadUrl: "/downloads/products-demo.zip",
     features: [
-      { title: "Workflow Automation", description: "Streamline processes" },
-      { title: "Integration Hub", description: "Connect all systems" },
-      { title: "Real-time Monitoring", description: "Live process tracking" },
-      { title: "Custom Triggers", description: "Event-based automation" }
+      { title: "AI-Powered", description: "Advanced AI algorithms for precise results" },
+      { title: "User-Friendly", description: "Intuitive interfaces for easy usage" },
+      { title: "Fast Processing", description: "Quick results with cloud processing" },
+      { title: "Batch Processing", description: "Handle multiple files at once" }
     ],
     techStack: [
-      { name: "Node.js", icon: "nodejs", color: '#339933' },
       { name: "Python", icon: "python", color: '#3776AB' },
-      { name: "Ansible", icon: "ansible", color: '#EE0000' },
-      { name: "Terraform", icon: "terraform", color: '#7B42BC' },
+      { name: "TensorFlow", icon: "tensorflow", color: '#FF6F00' },
+      { name: "React", icon: "react", color: '#61DAFB' },
+      { name: "Node.js", icon: "nodejs", color: '#339933' },
+      { name: "AWS", icon: "aws", color: '#FF9900' },
       { name: "Docker", icon: "docker", color: '#2496ED' },
-      { name: "Kubernetes", icon: "kubernetes", color: '#326CE5' },
       { name: "Redis", icon: "redis", color: '#DC382D' },
-      { name: "RabbitMQ", icon: "rabbitmq", color: '#FF6600' }
+      { name: "GraphQL", icon: "graphql", color: '#E10098' }
     ],
     process: [
-      { step: 1, title: "Analysis", description: "Process mapping" },
-      { step: 2, title: "Design", description: "Automation architecture" },
-      { step: 3, title: "Integration", description: "System connection" },
-      { step: 4, title: "Testing", description: "Quality assurance" },
-      { step: 5, title: "Deployment", description: "Go-live support" }
+      { step: 1, title: "Select Tool", description: "Choose the right tool for your task" },
+      { step: 2, title: "Upload", description: "Upload your files securely" },
+      { step: 3, title: "Process", description: "AI-powered processing" },
+      { step: 4, title: "Download", description: "Get your optimized results" }
     ],
     examples: [
       {
-        title: "Manufacturing Automation",
-        image: "/images/services/automation/manufacturing.jpg",
-        description: "End-to-end process automation"
+        title: "YouTube Thumbnail Generator",
+        image: "/images/services/products/thumbnail-example.jpg",
+        description: "Create professional YouTube thumbnails with customizable templates, text overlays, and effects. Perfect for content creators and marketers."
+      },
+      {
+        title: "Background Remover",
+        image: "/images/services/products/bgremove-example.jpg",
+        description: "Remove backgrounds from images instantly using AI. Ideal for e-commerce, profile pictures, and product photography."
+      },
+      {
+        title: "Image Optimizer",
+        image: "/images/services/products/optimizer-example.jpg",
+        description: "Optimize images for web without losing quality. Reduce file size and improve loading times."
+      },
+      {
+        title: "Code Snippet Generator",
+        image: "/images/services/products/code-example.jpg",
+        description: "Generate beautiful code snippets for documentation, blogs, and social media sharing."
+      },
+      {
+        title: "Social Media Post Creator",
+        image: "/images/services/products/social-example.jpg",
+        description: "Design engaging social media posts with customizable templates and brand assets."
       }
     ],
     testimonials: [
       {
-        name: "Sarah Williams",
-        role: "Operations Director, AutoCorp",
-        content: "Automation reduced our processing time by 75% and eliminated manual errors.",
-        image: "/testimonials/sarah.jpg"
+        name: "Alex Turner",
+        role: "Content Creator",
+        content: "The YouTube Thumbnail Generator has dramatically improved my content's click-through rate. A must-have tool!",
+        image: "/testimonials/alex.jpg"
+      },
+      {
+        name: "Emma Rodriguez",
+        role: "E-commerce Manager",
+        content: "The Background Remover tool saves us hours of manual editing. The results are consistently professional.",
+        image: "/testimonials/emma.jpg"
       }
     ],
     faqs: [
       {
-        question: "What industries benefit most from automation?",
-        answer: "Manufacturing, logistics, healthcare, and financial services see the most immediate impact."
+        question: "Are the tools free to use?",
+        answer: "We offer both free and premium tiers. Basic features are free, while advanced features and bulk processing require a subscription."
       },
       {
-        question: "How long does implementation take?",
-        answer: "Basic automation can be implemented in 2-4 weeks, while complex systems may take 2-3 months."
+        question: "How secure is my data?",
+        answer: "We use enterprise-grade encryption and automatically delete uploaded files after processing. Your data's security is our priority."
+      },
+      {
+        question: "Can I integrate these tools with my application?",
+        answer: "Yes, all our tools offer API access for seamless integration with your applications."
       }
     ],
-    ctaText: "Automate Your Business"
+    ctaText: "Try Our Tools"
   }
 };
 

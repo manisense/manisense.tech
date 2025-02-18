@@ -5,9 +5,9 @@ import dynamic from 'next/dynamic';
 import ServiceHero from "@/components/services/ServiceHero";
 
 // Dynamic imports with loading fallbacks
-// const ServiceTemplate = dynamic(() => import("@/components/services/ServiceTemplate"), {
-//   loading: () => <div className="animate-pulse bg-gray-200 h-96 rounded-xl" />
-// });
+const ServiceTemplate = dynamic(() => import("@/components/services/ServiceTemplate"), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-96 rounded-xl" />
+});
 
 const ServiceDetails = dynamic(() => import("@/components/services/ServiceDetails"), {
   loading: () => <div className="animate-pulse bg-gray-200 h-96 rounded-xl" />
@@ -27,8 +27,8 @@ export async function generateStaticParams() {
   return [
     { service: "websites" },
     { service: "mobile-apps" },
-    { service: "ai-solutions" },
-    { service: "automation" },
+    { service: "ai-automation" },
+    { service: "products" },
   ];
 }
 
@@ -46,13 +46,9 @@ export default async function ServicePage({ params }: { params: { service: strin
         description={serviceData.description}
         image={serviceData.heroImage}
       />
-{/*       
-      <ServiceTemplate 
-       // title={serviceData.title}
-        description={serviceData.description}
-        image={serviceData.heroImage}
-        
-      /> */}
+<ServiceTemplate 
+        template={serviceData.template}
+      />
       
       <ServiceDetails
         features={serviceData.features}
